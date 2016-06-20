@@ -18,7 +18,7 @@ export PKG_CONFIG_PATH=${SRC}/lib/pkgconfig
 
 # Runtime requirements
 apt-get update
-apt-get -y install fuse libfuse2
+apt-get -y install fuse libfuse2 libcurl3-gnutls libxml2 libssl1.0.0
 
 # Install build requirements
 BUILD_REQS='automake autotools-dev curl g++ git libcurl4-gnutls-dev libfuse-dev libssl-dev libxml2-dev make pkg-config'
