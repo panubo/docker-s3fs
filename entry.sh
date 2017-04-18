@@ -4,7 +4,7 @@
 
 # Fail on all script errors
 set -e
-[ "${DEBUG:-false}" == 'true' ] && set -x
+[ "${DEBUG:-false}" == 'true' ] && ( set -x; S3FS_DEBUG='-d -d' )
 
 # Defaults
 : ${AWS_S3_AUTHFILE:='/root/.s3fs'}
@@ -41,7 +41,7 @@ echo "==> Mounting S3 Filesystem"
 mkdir -p ${AWS_S3_MOUNTPOINT}
 
 # s3fs mount command
-s3fs $S3FS_ARGS -o passwd_file=${AWS_S3_AUTHFILE} -o url=${AWS_S3_URL} ${AWS_STORAGE_BUCKET_NAME} ${AWS_S3_MOUNTPOINT}
+s3fs $S3FS_DEBUG $S3FS_ARGS -o passwd_file=${AWS_S3_AUTHFILE} -o url=${AWS_S3_URL} ${AWS_STORAGE_BUCKET_NAME} ${AWS_S3_MOUNTPOINT}
 
 echo "Running command $@"
 
