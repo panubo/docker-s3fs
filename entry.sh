@@ -4,7 +4,7 @@
 
 # Fail on all script errors
 set -e
-[ "${DEBUG:-false}" == 'true' ] && ( set -x; S3FS_DEBUG='-d -d' )
+[ "${DEBUG:-false}" == 'true' ] && { set -x; S3FS_DEBUG='-d -d'; }
 
 # Defaults
 : ${AWS_S3_AUTHFILE:='/root/.s3fs'}
