@@ -11,13 +11,14 @@ Docker container for [s3fs fuse](https://github.com/s3fs-fuse/s3fs-fuse).
 - `AWS_S3_MOUNTPOINT` - mountpoint default `/mnt`
 - `AWS_S3_URL` - s3 endpoint default `https://s3.amazonaws.com`
 - `S3FS_ARGS` - additional s3fs mount arguments
+- `DEBUG` - enable DEBUG mode.
 
 ## Usage example
 
 ```bash
 docker run --rm -t -i --privileged \
-  -e AWS_SECRET_ACCESS_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \
-  -e AWS_SECRET_ACCESS_KEY= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \
+  -e AWS_ACCESS_KEY_ID=xxxxxxxxxxxxxxxxxxxx \
+  -e AWS_SECRET_ACCESS_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \
   -e AWS_STORAGE_BUCKET_NAME=example \
   docker.io/panubo/s3fs ls /mnt
 ```
