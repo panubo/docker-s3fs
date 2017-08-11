@@ -11,3 +11,7 @@ Docker container for [s3fs fuse](https://github.com/s3fs-fuse/s3fs-fuse).
 - `AWS_SECRET_ACCESS_KEY`
 - `AWS_STORAGE_BUCKET_NAME`
 - `S3FS_ARGS` - additional s3fs mount arguments
+
+## Status
+
+Stable in production.
