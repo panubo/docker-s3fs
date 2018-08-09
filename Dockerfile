@@ -1,6 +1,6 @@
-FROM debian:jessie
+FROM debian:stretch
 
-ENV S3FS_VERSION=1.82 S3FS_SHA1=fb7e476e25dffc66f9dbd7a6617602bdccee21fe
+ENV S3FS_VERSION=1.84 S3FS_SHA1=9322692aa797fcc6fefe300086e07b33bbc735c9
 
 ADD *.sh /
 

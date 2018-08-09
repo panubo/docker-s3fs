@@ -1,4 +1,4 @@
-TAG      := 1.82
+TAG      := 1.84
 IMAGE    := panubo/s3fs
 REGISTRY := docker.io
 

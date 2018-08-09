@@ -18,7 +18,7 @@ export PKG_CONFIG_PATH=${SRC}/lib/pkgconfig
 
 # Runtime requirements
 apt-get update
-apt-get -y install fuse libfuse2 libcurl3-gnutls libxml2 libssl1.0.0
+apt-get -y install fuse libfuse2 libcurl3-gnutls libxml2 libssl1.1
 
 # Install build requirements
 BUILD_REQS='automake autotools-dev curl g++ git libcurl4-gnutls-dev libfuse-dev libssl-dev libxml2-dev make pkg-config'
@@ -27,6 +27,7 @@ apt-get -y install $BUILD_REQS
 # Build s3fs
 DIR=$(mktemp -d) && cd ${DIR}
 curl -s https://codeload.github.com/s3fs-fuse/s3fs-fuse/tar.gz/v${S3FS_VERSION} -o s3fs.tar.gz
+sha1sum s3fs.tar.gz
 echo "$S3FS_SHA1 s3fs.tar.gz" | sha1sum -c -
 tar -xzf s3fs.tar.gz -C . --strip-components=1
 ./autogen.sh
