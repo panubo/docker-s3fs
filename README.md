@@ -1,6 +1,6 @@
-# S3FS Fuse Docker Container
+# S3FS Fuse Docker image
 
-Docker container for [s3fs fuse](https://github.com/s3fs-fuse/s3fs-fuse).
+Docker image for [s3fs fuse](https://github.com/s3fs-fuse/s3fs-fuse).
 
 ## Configuration
 
