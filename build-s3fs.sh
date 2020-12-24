@@ -27,8 +27,8 @@ apt-get -y install $BUILD_REQS
 # Build s3fs
 DIR=$(mktemp -d) && cd ${DIR}
 curl -s https://codeload.github.com/s3fs-fuse/s3fs-fuse/tar.gz/v${S3FS_VERSION} -o s3fs.tar.gz
-sha1sum s3fs.tar.gz
-echo "$S3FS_SHA1 s3fs.tar.gz" | sha1sum -c -
+sha256sum s3fs.tar.gz
+echo "$S3FS_SHA256 s3fs.tar.gz" | sha256sum -c -
 tar -xzf s3fs.tar.gz -C . --strip-components=1
 ./autogen.sh
 ./configure
